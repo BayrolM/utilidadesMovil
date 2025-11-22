@@ -10,7 +10,7 @@ void main() {
   runApp(const MyApp());
 }
 
-// Estados de navegación
+
 enum AppState { principal, temperatura, imc, password, todolist, analizador }
 
 class MyApp extends StatelessWidget {
@@ -53,9 +53,6 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
     };
   }
 
-  // -----------------------------------------------------
-  // PANTALLA PRINCIPAL — SIMPLE
-  // -----------------------------------------------------
   Widget _pantallaPrincipal() {
     return Scaffold(
       appBar: AppBar(title: const Text("Menú Principal"), centerTitle: true),
@@ -70,7 +67,7 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
             ),
             const SizedBox(height: 30),
 
-            // Conversor Temperatura
+     
             _opcion(
               titulo: "Conversor de Temperatura",
               color: Colors.blue,
@@ -106,9 +103,7 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
     );
   }
 
-  // -----------------------------------------------------
-  // OPCIÓN ULTRA SIMPLE (sin iconos, sin bordes)
-  // -----------------------------------------------------
+
   Widget _opcion({
     required String titulo,
     required MaterialColor color,
